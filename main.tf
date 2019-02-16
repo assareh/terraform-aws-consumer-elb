@@ -1,5 +1,5 @@
 resource "aws_elb" "example" {
-  name = "terraform-asg-example-${var.name)"
+  name = "terraform-asg-example-${var.name}"
   security_groups = ["${aws_security_group.elb.id}"]
   availability_zones = ["${data.aws_availability_zones.all.names}"]
   health_check {
