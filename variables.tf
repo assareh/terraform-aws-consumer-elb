@@ -3,7 +3,7 @@ variable "name" {
 }
 variable "instances" {
   description = "The name of the ELB"
-  type = list
+  type = "list"
 }
 variable "instance_count" {
   description = "The name of the ELB"
