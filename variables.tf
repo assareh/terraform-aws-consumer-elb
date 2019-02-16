@@ -5,7 +5,7 @@ variable "instances" {
   description = "The name of the ELB"
   type = "list"
 }
-variable "instance_count" {
+variable "number_of_instances" {
   description = "The name of the ELB"
   default = 2
 }
