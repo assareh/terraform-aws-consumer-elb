@@ -1,5 +1,5 @@
 resource "aws_elb" "example" {
-  name = "terraform-asg-example"
+  name = "terraform-asg-example-${var.name)"
   security_groups = ["${aws_security_group.elb.id}"]
   #availability_zones = ["${data.aws_availability_zones.all.names}"]
   health_check {
@@ -18,7 +18,7 @@ resource "aws_elb" "example" {
 }
 
 resource "aws_security_group" "elb" {
-  name = "terraform-example-elb"
+  name = "terraform-example-elb-${var.name}"
   egress {
     from_port = 0
     to_port = 0
