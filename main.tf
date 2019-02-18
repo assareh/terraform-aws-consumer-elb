@@ -1,7 +1,7 @@
 data "aws_availability_zones" "available" {}
 
 resource "aws_elb" "example" {
-  name = "elb-example-${var.name}"
+  name = "elb-example-${var.name}-${var.environment}"
   security_groups = ["${aws_security_group.elb.id}"]
   availability_zones = ["${data.aws_availability_zones.available.names}"]
   health_check {
@@ -20,7 +20,7 @@ resource "aws_elb" "example" {
 }
 
 resource "aws_security_group" "elb" {
-  name = "elb-${var.name}"
+  name = "elb-sg-${var.name}-${var.environment}"
   egress {
     from_port = 0
     to_port = 0
