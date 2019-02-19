@@ -2,7 +2,7 @@ variable "name" {
   description = "The name of the ELB or app.  example: Consumer-App"
 }
 variable "instances" {
-  description = "A list containing ec2 instances for the load balancer to use.  examples: ["${module.ec2_instance.id}"] or ["i-1234567890abcdef0","i-2345678901abcdef2"]"
+  description = "A list containing ec2 instances for the load balancer to use.  examples: ["${module.ec2_instance.id}"]"
   type = "list"
 }
 variable "number_of_instances" {
