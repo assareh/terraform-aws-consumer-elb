@@ -9,3 +9,7 @@ variable "number_of_instances" {
   description = "The number of EC2 instances to deploy behind the load balancer.  default: 2"
   default = 2
 }
+
+variable "environment" {
+  description = "The environment this will be deployed into.  examples: dev, stage, prod"
+}
