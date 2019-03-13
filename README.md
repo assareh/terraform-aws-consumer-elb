@@ -6,7 +6,7 @@ This repo contains a Module to deploy a [Elastic Load Balancer (ELB)](https://do
 #![ELB Example](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/images/internet_facing_load_balancer.png)
 
 This Module includes:
-/*:
+<!---
 * [install-vault](https://github.com/hashicorp/terraform-azurerm-vault/tree/master/modules/install-vault): This module can be used to install Vault. It can be used in a 
   [Packer](https://www.packer.io/) template to create a Vault 
   [Azure Manager Image](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/build-image-with-packer).
@@ -24,7 +24,7 @@ This Module includes:
 * [update-certificate-store](https://github.com/hashicorp/terraform-azurerm-vault/tree/master/modules/update-certificate-store): Add a trusted, CA public key to an OS's 
   certificate store. This allows you to establish TLS connections to services that use this TLS certs signed by this
   CA without getting x509 certificate errors.
-   */
+-->
 
 
 
