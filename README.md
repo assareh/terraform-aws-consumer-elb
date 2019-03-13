@@ -5,7 +5,8 @@ This repo contains a Module to deploy a [Elastic Load Balancer (ELB)](https://do
 
 #![ELB Example](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/images/internet_facing_load_balancer.png)
 
-This Module includes:
+This Module works well with the following related modules:
+  Consumer EC2 Module
 <!---
 * [install-vault](https://github.com/hashicorp/terraform-azurerm-vault/tree/master/modules/install-vault): This module can be used to install Vault. It can be used in a 
   [Packer](https://www.packer.io/) template to create a Vault 
@@ -30,17 +31,11 @@ This Module includes:
 
 ## What's a Module?
 
-A Module is a canonical, reusable, best-practices definition for how to run a single piece of infrastructure, such 
-as a database or server cluster. Each Module is created primarily using [Terraform](https://www.terraform.io/), 
-includes automated tests, examples, and documentation, and is maintained both by the open source community and 
-companies that provide commercial support. 
+A Module is a reusable, best-practices definition for how to run a single piece of infrastructure, such 
+as a database or server cluster. 
 
 Instead of having to figure out the details of how to run a piece of infrastructure from scratch, you can reuse 
-existing code that has been proven in production. And instead of maintaining all that infrastructure code yourself, 
-you can leverage the work of the Module community and maintainers, and pick up infrastructure improvements through
-a version number bump.
- 
- 
+existing code that has been proven in production and approved by the security team.
  
 ## Who maintains this Module?
 
