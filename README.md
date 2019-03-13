@@ -3,7 +3,7 @@
 This repo contains a Module to deploy a [Elastic Load Balancer (ELB)](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/introduction.html) on 
 [AWS](https://aws.amazon.com) using [Terraform](https://www.terraform.io/). 
 
-#![ELB Example](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/images/internet_facing_load_balancer.png)
+![ELB Example](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/images/internet_facing_load_balancer.png)
 
 This Module works well with the following related modules:
 
