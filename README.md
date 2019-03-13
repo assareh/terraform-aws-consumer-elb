@@ -28,7 +28,13 @@ This Module works well with the following related modules:
   CA without getting x509 certificate errors.
 -->
 
+## Who maintains this Module?
 
+This module is maintained by the Organization's Infrastructure Team
+
+| Name | Description | Type | Default | Required |
+|------|-------------|:----:|:-----:|:-----:|
+| access_logs | An access logs block | list | `<list>` | no |
 
 ## What's a Module?
 
@@ -37,19 +43,6 @@ as a database or server cluster.
 
 Instead of having to figure out the details of how to run a piece of infrastructure from scratch, you can reuse 
 existing code that has been proven in production and approved by the security team.
- 
-## Who maintains this Module?
-
-This Module is maintained by [Gruntwork](http://www.gruntwork.io/). If you're looking for help or commercial 
-support, send an email to [modules@gruntwork.io](mailto:modules@gruntwork.io?Subject=Vault%20Module). 
-Gruntwork can help with:
-
-* Setup, customization, and support for this Module.
-* Module for other types of infrastructure, such as VPCs, Docker clusters, databases, and continuous integration.
-* Module that meet compliance requirements, such as HIPAA.
-* Consulting & Training on AWS, Terraform, and DevOps.
-
-
 
 ## How do you use this Module?
 
