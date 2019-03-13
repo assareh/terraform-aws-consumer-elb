@@ -7,7 +7,7 @@ This repo contains a Module to deploy a [Elastic Load Balancer (ELB)](https://do
 
 This Module works well with the following related modules:
 
-  Consumer EC2 Module
+* Consumer EC2 Module
 <!---
 * [install-vault](https://github.com/hashicorp/terraform-azurerm-vault/tree/master/modules/install-vault): This module can be used to install Vault. It can be used in a 
   [Packer](https://www.packer.io/) template to create a Vault 
