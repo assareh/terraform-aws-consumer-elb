@@ -30,7 +30,7 @@ This Module works well with the following related modules:
 
 ## Who maintains and approves this module?
 
-This module is maintained by the Organization's Infrastructure Team
+This module is maintained by the Organization's Infrastructure Team.  Email infra@organization.com for more info.
 
 | Version | Description | Security Team Approval? | Approver | Approval Date|
 |------|-------------|:----:|:-----:|:-----:|
