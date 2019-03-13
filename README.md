@@ -28,13 +28,14 @@ This Module works well with the following related modules:
   CA without getting x509 certificate errors.
 -->
 
-## Who maintains this Module?
+## Who maintains and approves this module?
 
 This module is maintained by the Organization's Infrastructure Team
 
-| Name | Description | Type | Default | Required |
+| Version | Description | Security Team Approval? | Approver | Approval Date|
 |------|-------------|:----:|:-----:|:-----:|
-| access_logs | An access logs block | list | `<list>` | no |
+| v1.1 | closed firewall ports | Yes | John Doe | 01/01/2019 |
+| v1.0 | Initial ELB | No | N/A | N/A |
 
 ## What's a Module?
 
