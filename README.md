@@ -1,12 +1,9 @@
-# Vault Azure Module
+# Consumer ELB Module
 
-This repo contains a Module to deploy a [Vault](https://www.vaultproject.io/) cluster on 
-[Azure](https://azure.microsoft.com/) using [Terraform](https://www.terraform.io/). Vault is an open source tool for 
-managing secrets. This Module uses [Azure Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-dotnet-how-to-use-blobs) as a [storage 
-backend](https://www.vaultproject.io/docs/configuration/storage/index.html) and a [Consul](https://www.consul.io) 
-server cluster as a [high availability backend](https://www.vaultproject.io/docs/concepts/ha.html):
+This repo contains a Module to deploy a [Elastic Load Balancer (ELB)](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/introduction.html) on 
+[AWS](https://aws.amazon.com) using [Terraform](https://www.terraform.io/). 
 
-![Vault architecture](https://raw.githubusercontent.com/hashicorp/terraform-azurerm-vault/master/_docs/architecture.png)
+#![ELB Example](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/images/internet_facing_load_balancer.png)
 
 This Module includes:
 
