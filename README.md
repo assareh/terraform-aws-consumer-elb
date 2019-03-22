@@ -127,7 +127,7 @@ module "elb" {
 }
   
 module "ec2_instances" {
-  source = "app.terraform.io/<YOURTFEORGNAME>consumer-ec2-instance/aws"
+  source = "app.terraform.io/<YOURTFEORGNAME>/consumer-ec2-instance/aws"
   version = "1.4"
   name                        = "${var.name}-ec2"
   instance_count = "${var.number_of_instances}"
