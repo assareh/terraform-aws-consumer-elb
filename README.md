@@ -37,13 +37,6 @@ This module is maintained by the Organization's Infrastructure Team.  Email infr
 | v1.1 | closed firewall ports | Yes | John Doe | 01/01/2019 |
 | v1.0 | Initial ELB | No | N/A | N/A |
 
-## What's a Module?
-
-A Module is a reusable, best-practices definition for how to run a single piece of infrastructure, such 
-as a database or server cluster. 
-
-Instead of having to figure out the details of how to run a piece of infrastructure from scratch, you can reuse 
-existing code that has been proven in production and approved by the security team.
 
 ## How do you use this Module?
 
@@ -199,22 +192,26 @@ module "elb_http" {
 
 | Name | Description |
 |------|-------------|
-| this_elb_arn | The ARN of the ELB |
+<!-- | this_elb_arn | The ARN of the ELB |
 | this_elb_dns_name | The DNS name of the ELB |
 | this_elb_id | The name of the ELB |
 | this_elb_instances | The list of instances in the ELB |
 | this_elb_name | The name of the ELB |
 | this_elb_source_security_group_id | The ID of the security group that you can use as part of your inbound rules for your load balancer's back-end application instances |
 | this_elb_zone_id | The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record) |
-
+-->
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Authors
 
 Module managed by [HashiCorp SE Team](https://github.com/hashicorp).
 
-## License
+## What's a Module?
 
-Apache 2 Licensed. See LICENSE for full details.
+A Module is a reusable, best-practices definition for how to run a single piece of infrastructure, such 
+as a database or server cluster. 
+
+Instead of having to figure out the details of how to run a piece of infrastructure from scratch, you can reuse 
+existing code that has been proven in production and approved by the security team.
 
 
