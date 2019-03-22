@@ -37,10 +37,10 @@ This module is maintained by the Organization's Infrastructure Team.  Email infr
 | v1.1 | closed firewall ports | Yes | John Doe | 01/01/2019 |
 | v1.0 | Initial ELB | No | N/A | N/A |
 
-
+<!--
 ## How do you use this Module?
 
-<!--
+
 Each Module has the following folder structure:
 
 * [root](https://github.com/hashicorp/terraform-azurerm-vault/tree/master/): The root folder contains an example of running a public Vault cluster on Azure
