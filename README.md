@@ -140,6 +140,11 @@ module "ec2_instances" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
+| environment | Choose: dev,stage,prod | string | - | yes |
+| instances | List of instances ID to place in the ELB pool | list | `<list>` | yes |
+| name | The name of the ELB | string | - | yes |
+| number_of_instances | Number of instances to attach to ELB | string | `2` | no |
+
 <!--
 | access_logs | An access logs block | list | `<list>` | no |
 | connection_draining | Boolean to enable connection draining | string | `false` | no |
@@ -147,11 +152,8 @@ module "ec2_instances" {
 | cross_zone_load_balancing | Enable cross-zone load balancing | string | `true` | no |
 | health_check | A health check block | list | - | yes |
 | idle_timeout | The time in seconds that the connection is allowed to be idle | string | `60` | no |
-| instances | List of instances ID to place in the ELB pool | list | `<list>` | no |
 | internal | If true, ELB will be an internal ELB | string | - | yes |
 | listener | A list of listener blocks | list | - | yes |
-| name | The name of the ELB | string | - | yes |
-| number_of_instances | Number of instances to attach to ELB | string | `0` | no |
 | security_groups | A list of security group IDs to assign to the ELB | list | - | yes |
 | subnets | A list of subnet IDs to attach to the ELB | list | - | yes |
 | tags | A mapping of tags to assign to the resource | string | `<map>` | no |
@@ -159,7 +161,11 @@ module "ec2_instances" {
 
 ## Outputs
 
-This module does not have any outputs.
+This module contains no outputs.
+
+| Name | Description |
+|------|-------------|
+
 
 <!--
 | Name | Description |
@@ -174,16 +180,29 @@ This module does not have any outputs.
 -->
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
-## Examples
+## Configurations Baked into Module
+
+| Name | Description |
+|------|-------------|
+| security group | Ingress: Allow TCP port 80 from 0.0.0.0/0|
+| listener | lb_port = 80 lb_protocol = "http" instance_port = "8080" instance_protocol = "http" |
+| health check |     healthy_threshold = 2
+    unhealthy_threshold = 2
+    timeout = 3
+    interval = 30
+    target = "HTTP:8080/" |
+
+## Further Reading
 
 * [Complete ELB example](https://github.com/terraform-aws-modules/terraform-aws-elb/tree/master/examples/complete)
 
+<!--
 ## Known Issues/Limitations
 
 * Support for HTTPS is a common requirment for Internet facing ELBs. However, there is a known Terraform limitation with providing a dynamic computed value for the ```ssl_id_certificate``` parameter in nested block structures (Refer to: https://github.com/hashicorp/terraform/issues/16582#issuecomment-342570913).
 
 
-<!--
+
 ## Authors
 
 Module managed by [HashiCorp SE Team](https://github.com/hashicorp).
