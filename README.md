@@ -40,6 +40,7 @@ This module is maintained by the Organization's Infrastructure Team.  Email infr
 
 ## How do you use this Module?
 
+<!--
 Each Module has the following folder structure:
 
 * [root](https://github.com/hashicorp/terraform-azurerm-vault/tree/master/): The root folder contains an example of running a public Vault cluster on Azure
@@ -110,7 +111,7 @@ Root module calls these modules which can also be used separately to create inde
 
 * [elb](https://github.com/terraform-aws-modules/terraform-aws-elb/tree/master/modules/elb) - creates ELB
 * [elb_attachment](https://github.com/terraform-aws-modules/terraform-aws-elb/tree/master/modules/elb_attachment) - creates ELB attachment
-
+-->
 ## Usage
 
 ```hcl
@@ -173,6 +174,7 @@ module "elb_http" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
+<!--
 | access_logs | An access logs block | list | `<list>` | no |
 | connection_draining | Boolean to enable connection draining | string | `false` | no |
 | connection_draining_timeout | The time in seconds to allow for connections to drain | string | `300` | no |
@@ -187,12 +189,16 @@ module "elb_http" {
 | security_groups | A list of security group IDs to assign to the ELB | list | - | yes |
 | subnets | A list of subnet IDs to attach to the ELB | list | - | yes |
 | tags | A mapping of tags to assign to the resource | string | `<map>` | no |
+-->
 
 ## Outputs
 
+This module does not have any outputs.
+
+<!--
 | Name | Description |
 |------|-------------|
-<!-- | this_elb_arn | The ARN of the ELB |
+| this_elb_arn | The ARN of the ELB |
 | this_elb_dns_name | The DNS name of the ELB |
 | this_elb_id | The name of the ELB |
 | this_elb_instances | The list of instances in the ELB |
@@ -206,6 +212,7 @@ module "elb_http" {
 
 Module managed by [HashiCorp SE Team](https://github.com/hashicorp).
 
+<!--
 ## What's a Module?
 
 A Module is a reusable, best-practices definition for how to run a single piece of infrastructure, such 
@@ -213,5 +220,5 @@ as a database or server cluster.
 
 Instead of having to figure out the details of how to run a piece of infrastructure from scratch, you can reuse 
 existing code that has been proven in production and approved by the security team.
-
+-->
 
