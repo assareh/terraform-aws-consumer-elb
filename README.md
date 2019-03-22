@@ -115,49 +115,24 @@ Root module calls these modules which can also be used separately to create inde
 ## Usage
 
 ```hcl
-module "elb_http" {
-  source = "terraform-aws-modules/elb/aws"
-
-  name = "elb-example"
-
-  subnets         = ["subnet-12345678", "subnet-87654321"]
-  security_groups = ["sg-12345678"]
-  internal        = false
-
-  listener = [
-    {
-      instance_port     = "80"
-      instance_protocol = "HTTP"
-      lb_port           = "80"
-      lb_protocol       = "HTTP"
-    },
-  ]
-
-  health_check = [
-    {
-      target              = "HTTP:80/"
-      interval            = 30
-      healthy_threshold   = 2
-      unhealthy_threshold = 2
-      timeout             = 5
-    },
-  ]
-
-  access_logs = [
-    {
-      bucket = "my-access-logs-bucket"
-    },
-  ]
-
-  // ELB attachments
-  number_of_instances = 2
-  instances           = ["i-06ff41a77dfb5349d", "i-4906ff41a77dfb53d"]
+module "elb" {
+  source  = "app.terraform.io/<YOURTFEORGNAME>/consumer-elb/aws"
+  version = "1.13"
+  name = "${var.name}-elb"
+  environment = "${var.environment}"
   
-  tags = {
-    Owner       = "user"
-    Environment = "dev"
-  }
+  # ELB attachments
+  number_of_instances = "${var.number_of_instances}"
+  instances           = ["${module.ec2_instances.id}"]
 }
+  
+module "ec2_instances" {
+  source = "app.terraform.io/<YOURTFEORGNAME>consumer-ec2-instance/aws"
+  version = "1.4"
+  name                        = "${var.name}-ec2"
+  instance_count = "${var.number_of_instances}"
+}
+
 ```
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
