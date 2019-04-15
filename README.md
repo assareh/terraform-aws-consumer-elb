@@ -140,7 +140,7 @@ module "ec2_instances" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| environment | Choose: dev<br/>stage<br/>prod | string | - | yes |
+| environment | Choose: <br/>dev<br/>stage<br/>prod | string | - | yes |
 | instances | List of instances ID to place in the ELB pool | list | `<list>` | yes |
 | name | The name of the ELB | string | - | yes |
 | number_of_instances | Number of instances to attach to ELB | string | `2` | no |
