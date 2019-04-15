@@ -11,5 +11,5 @@ variable "number_of_instances" {
 }
 
 variable "environment" {
-  description = "The environment this will be deployed into.  examples: dev, stage, prod"
+  description = "The environment this will be deployed into.  examples: dev, stage, <br/> prod | more info:"
 }
