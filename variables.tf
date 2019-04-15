@@ -11,5 +11,5 @@ variable "number_of_instances" {
 }
 
 variable "environment" {
-  description = "The environment this will be deployed into.  examples: dev, stage, <br/> prod | more info:"
+  description = "The environment this will be deployed into.  examples: dev, stage, <br/> prod | more info: https://github.com/mocofound/terraform-aws-consumer-elb/edit/master/readme.md"
 }
