@@ -36,3 +36,9 @@ resource "aws_security_group" "elb" {
   }
 }
 
+resource "aws_elb_attachment" "this" {
+  count = var.number_of_instances
+
+  elb      = aws_elb.example.id
+  instance = element(var.instances, count.index)
+}
